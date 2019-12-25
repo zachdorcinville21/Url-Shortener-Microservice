@@ -13,7 +13,6 @@ app.use(cors());
 app.use(express.static(__dirname + '/public'));
 
 //connect to DB
-//process.env.MONGO_URI = "mongodb+srv://zachdorcinville:zachster101@mycluster-7rgrv.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/urls', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //create database entry
